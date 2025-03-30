@@ -1,153 +1,160 @@
 /* Global Styles */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f9;
-  color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+    color: #333;
 }
 
-/* Navigation Bar */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  padding: 1rem 2rem;
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
 }
 
-nav .logo {
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: bold;
+header h1 {
+    margin: 0;
 }
 
-nav .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
+.logo {
+    height: 50px;
+    margin-bottom: 10px;
 }
 
-nav .nav-links a {
-  color: #fff;
-  text-decoration: none;
+.back-button {
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    left: 20px;
+    top: 20px;
 }
 
-nav .nav-links a:hover {
-  color: #ff6347;
+/* Home Page Styles */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: 5rem 2rem;
-  background-color: #007bff;
-  color: #fff;
+.tool-card {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
+.tool-card:hover {
+    transform: translateY(-5px);
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin: 1rem 0;
+.tool-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
 }
 
-.cta-button {
-  background-color: #ff6347;
-  color: #fff;
-  padding: 0.8rem 2rem;
-  text-decoration: none;
-  border-radius: 5px;
+/* Converter Page Styles */
+.converter-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-.cta-button:hover {
-  background-color: #ff4500;
+.upload-area {
+    border: 2px dashed #3498db;
+    border-radius: 8px;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    background-color: #f8fafc;
+    transition: all 0.3s ease;
 }
 
-/* Tools Section */
-.tools {
-  padding: 2rem;
-  text-align: center;
+.upload-area:hover {
+    background-color: #eef2f7;
 }
 
-.tools h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.upload-area.highlight {
+    border-color: #2ecc71;
+    background-color: #e8f8f0;
 }
 
-.tool-cards {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
 }
 
-.card {
-  background-color: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 250px;
+button:hover {
+    background-color: #2980b9;
 }
 
-.card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
 }
 
-.card p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
+.file-info {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #7f8c8d;
 }
 
-.card button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.result {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #e8f8f5;
+    border-radius: 8px;
+    display: none;
 }
 
-.card button:hover {
-  background-color: #0056b3;
+.download-btn {
+    display: inline-block;
+    background-color: #2ecc71;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
 }
 
-/* Tool Containers */
-.tool-container {
-  padding: 2rem;
-  text-align: center;
+.download-btn:hover {
+    background-color: #27ae60;
 }
 
-.tool-container textarea {
-  width: 80%;
-  height: 150px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.tool-container button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.tool-container button:hover {
-  background-color: #0056b3;
-}
-
-/* Footer */
 footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #333;
-  color: #fff;
-  margin-top: 2rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: #2c3e50;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
 }

@@ -1,81 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SEO Tools Website</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word & Excel to PDF Converter</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav>
-    <div class="logo">SEO Tools</div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#tools">Tools</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Homepage Section -->
-  <section id="home" class="hero">
-    <h1>Your All-in-One SEO Toolkit</h1>
-    <p>Boost your website's performance with our powerful tools.</p>
-    <a href="#tools" class="cta-button">Explore Tools</a>
-  </section>
-
-  <!-- Tools Section -->
-  <section id="tools" class="tools">
-    <h2>Our Tools</h2>
-    <div class="tool-cards">
-      <div class="card">
-        <h3>Plagiarism Checker</h3>
-        <p>Check for duplicate content.</p>
-        <button onclick="showTool('plagiarism')">Use Tool</button>
-      </div>
-      <div class="card">
-        <h3>Grammar Checker</h3>
-        <p>Improve your writing.</p>
-        <button onclick="showTool('grammar')">Use Tool</button>
-      </div>
-      <div class="card">
-        <h3>Word Counter</h3>
-        <p>Count words in your text.</p>
-        <button onclick="showTool('wordCounter')">Use Tool</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Tool Containers -->
-  <div id="plagiarism" class="tool-container" style="display: none;">
-    <h2>Plagiarism Checker</h2>
-    <textarea id="plagiarismInput" placeholder="Paste your text here..."></textarea>
-    <button onclick="checkPlagiarism()">Check Plagiarism</button>
-    <p id="plagiarismResult"></p>
-    <button onclick="showHome()">Back to Home</button>
-  </div>
-
-  <div id="grammar" class="tool-container" style="display: none;">
-    <h2>Grammar Checker</h2>
-    <textarea id="grammarInput" placeholder="Paste your text here..."></textarea>
-    <button onclick="checkGrammar()">Check Grammar</button>
-    <p id="grammarResult"></p>
-    <button onclick="showHome()">Back to Home</button>
-  </div>
-
-  <div id="wordCounter" class="tool-container" style="display: none;">
-    <h2>Word Counter</h2>
-    <textarea id="wordCounterInput" placeholder="Paste your text here..."></textarea>
-    <button onclick="countWords()">Count Words</button>
-    <p id="wordCounterResult"></p>
-    <button onclick="showHome()">Back to Home</button>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 SEO Tools. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <header>
+        <img src="assets/images/logo.png" alt="PDF Tools Logo" class="logo">
+        <h1>Document to PDF Converter</h1>
+    </header>
+    
+    <main>
+        <div class="tools-grid">
+            <div class="tool-card" onclick="window.location.href='word-to-pdf.html'">
+                <img src="assets/images/word-icon.png" alt="Word to PDF">
+                <h2>Word to PDF</h2>
+                <p>Convert DOC/DOCX files to PDF format</p>
+            </div>
+            
+            <div class="tool-card" onclick="window.location.href='excel-to-pdf.html'">
+                <img src="assets/images/excel-icon.png" alt="Excel to PDF">
+                <h2>Excel to PDF</h2>
+                <p>Convert XLS/XLSX files to PDF format</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2023 PDF Tools. All rights reserved.</p>
+    </footer>
+    
+    <script src="assets/js/main.js"></script>
 </body>
-    </html>
+</html>
